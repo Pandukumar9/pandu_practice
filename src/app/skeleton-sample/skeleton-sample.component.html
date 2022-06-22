@@ -1,0 +1,41 @@
+<!-- this is sample skeleton loader using for reference -->
+<!-- <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{dogimg}}" alt="Card image cap" *ngIf="contentLoaded">
+  <ngx-skeleton-loader count="1" *ngIf="!contentLoaded" appearance="line"  [theme]="{
+      'background-color': '#FFBF00',
+       height: '200px',
+      'border-radius': 0
+    }"></ngx-skeleton-loader>
+  <div class="card-body">
+    <p class="card-text" *ngIf="contentLoaded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text" *ngIf="contentLoaded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <ngx-skeleton-loader *ngIf="!contentLoaded" count="6" appearance="line" animation="pulse"></ngx-skeleton-loader>
+    <ngx-skeleton-loader count="2" appearance="line" animation="progress" *ngIf="!contentLoaded"
+ [theme]="{
+   'background-color': '#FFBF00',
+    height: '30px',
+   'border-radius': 0
+ }"
+>
+</ngx-skeleton-loader>
+<ngx-skeleton-loader *ngIf="!contentLoaded" count="1" appearance="circle"></ngx-skeleton-loader>
+
+  </div>
+</div> -->
+
+<div class="card" style="width: 18rem;margin-left: 34%;margin-bottom: 40px;margin-top: 40px;background-color: #e1b077;color: darkblue;font-family: auto;">
+  <h4 style="text-align: center;">ngx skeleton loader testing</h4>
+  <img class="card-img-top" src="{{dogimg}}" alt="Card image cap" *ngIf="contentLoaded">
+  <ngx-skeleton-loader count="1" *ngIf="!contentLoaded" appearance="line"  [theme]="{
+       height: '250px',
+       width: '16rem',
+      'border-radius': 0,
+      'margin-left' : '15px'
+    }"></ngx-skeleton-loader>
+  <div class="card-body">
+    <p class="card-text" *ngIf="contentLoaded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text" *ngIf="contentLoaded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <ngx-skeleton-loader *ngIf="!contentLoaded" count="6" appearance="line" animation="pulse"></ngx-skeleton-loader>
+
+  </div>
+</div>

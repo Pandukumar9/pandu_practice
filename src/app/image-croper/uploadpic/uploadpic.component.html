@@ -1,0 +1,37 @@
+<div class="jobseekerPopup uploadPrflPic">
+  <!-- <modal-header [headerText]="'Upload New Profile Picture'" [dialogref]="dialogRef"></modal-header> -->
+  <form [formGroup]='jsUploadPicForm' (ngSubmit)='uploadPic()'>
+    <mat-dialog-content>
+      <div class="col-md-12 alert alert-danger" *ngIf='imgErr'>
+        <p>{{imgErrmes}}</p>
+      </div>
+      <div class="upload-prfl-pic">
+        <h5>
+          <i>Recruiters will have positive opinion on your profile pic.</i>
+        </h5>
+        <br>
+        <input class="form-control form-control-file" style="height: 46px;" #myInput type="file" name="file" formControlName='pic' (change)='jsUploadPic($event)'>
+        <br>
+        <p>
+          <b>Supported file format:</b> .png, .jpg, .jpeg, .bmp  - upto 1MB
+          <span class="red">*</span>
+        </p>
+        <p>
+          <b>Recommended size:</b> min-width 100px and min-height 100px.
+          <span class="red">*</span>
+        </p>
+        <p>
+          <b>Note:</b> Your uploading profile pic should not violate the
+          <a routerLink="/terms-conditions" class="blue"> Terms</a> of GradSiren
+          <span class="red">*</span>
+        </p>
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button type='submit' class="btn btn-outline-success" [disabled]="isenableprofile">
+        <i class="ti-check" aria-hidden="true"></i>
+        &nbsp;Submit
+      </button>
+    </mat-dialog-actions>
+  </form>
+</div>

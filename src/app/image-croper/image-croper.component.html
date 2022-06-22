@@ -1,0 +1,25 @@
+<div class='jsImageDetails'>
+  <!-- <img [src]="snack.getJsImage(data?.userdata?.encodedImagePath, 'assets/img/Captuddre.jpg')" -->
+  <img src="{{dogimg}}" width="100px" height="100px"
+      alt="profile pic">
+  <div class="middle" (click)="updatePic()">
+      <a>
+          <div class="pic-text" style="margin-top: -58px;margin-left: 43pxx;margin-left: 17px;">Update Pic</div>
+      </a>
+  </div>
+</div>
+<br><br><br><br><br>
+<input type="file" (change)="fileChangeEvent($event)" />
+
+<image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="4 / 3"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()"
+></image-cropper>
+
+<img [src]="croppedImage" />
